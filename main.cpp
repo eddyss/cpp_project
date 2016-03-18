@@ -7,7 +7,7 @@ int main() {
   uniform U(0,1);
   std::cout << U() << std::endl;
   std::cout << U() << std::endl;
-  std::cout << U() << std::endl;
+  std::cout << "JP" << std::endl;
 
   return 0;
 };
