@@ -27,7 +27,7 @@ int store_array(char * file, int N, double *X, double *Y){
   ofstream fichier(file, ios::out | ios::trunc);
  
   if(fichier){
-    for(int i=0;i<N;i++){
+    for(int i=0;i<=N;i++){
       fichier << X[i] << "," << Y[i] << endl;
     }
  
@@ -47,7 +47,7 @@ int get_array(char * file, int N, double *X, double *Y){
       string x, y;
       int i=0;
       
-      while(i<N and getline(fichier, y)){ //lecture de la ligne
+      while(i<=N and getline(fichier, y)){ //lecture de la ligne
 	x = y.substr(0, y.find(delim));
 	y = y.substr(y.find(delim)+1,sizeof(x)/sizeof(char)-x.find(delim)-1);
 
